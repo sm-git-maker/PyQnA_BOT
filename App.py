@@ -9,7 +9,8 @@ from Config.BotConfig import DefaultConfig
 app = Flask(__name__)
 loop = asyncio.get_event_loop()
 BOTconfig = DefaultConfig()
-botsettings = BotFrameworkAdapterSettings(BOTconfig.APP_ID, BOTconfig.APP_PASSWORD)
+#botsettings = BotFrameworkAdapterSettings(BOTconfig.APP_ID, BOTconfig.APP_PASSWORD)
+botsettings = BotFrameworkAdapterSettings("","")
 botadapter = BotFrameworkAdapter(botsettings)
 
 CONMEMORY = ConversationState(MemoryStorage())
