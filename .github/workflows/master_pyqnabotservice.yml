@@ -31,4 +31,4 @@ jobs:
       with:
         app-name: 'pyqnabotservice'
         slot-name: 'production'
-        publish-profile: ${{ secrets.AzureAppService_PublishProfile_c53a865cdf81403184d9ac75b404c550 }}
+        publish-profile: ${{ secrets.AzureAppService_PublishProfile_0cb5a8c346c94b68ade02b59f2b4e2c0 }}
