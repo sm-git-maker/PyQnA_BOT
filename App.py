@@ -2,13 +2,14 @@ from flask import Flask, request, Response
 from botbuilder.core import BotFrameworkAdapter, BotFrameworkAdapterSettings, TurnContext, ConversationState, MemoryStorage
 from botbuilder.schema import Activity
 import asyncio
-
+import os
 from QnA import QnABOT
+from Config.BotConfig import DefaultConfig
 
 app = Flask(__name__)
 loop = asyncio.get_event_loop()
-
-botsettings = BotFrameworkAdapterSettings("","")
+BOTconfig = DefaultConfig()
+botsettings = BotFrameworkAdapterSettings(BOTconfig.APP_ID, BOTconfig.APP_PASSWORD)
 botadapter = BotFrameworkAdapter(botsettings)
 
 CONMEMORY = ConversationState(MemoryStorage())
